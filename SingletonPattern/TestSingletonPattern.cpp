@@ -42,12 +42,12 @@ EagerInitializedSingleton* TestSingletonPattern::testEagerInitializedSingleton()
 
 Singleton2* TestSingletonPattern::testSingleton2()
 {
-    return Singleton2::getInstance("Pierre Beldor");
+    return Singleton2::getInstance("My instance");
 }
 
 SingletonSafe* TestSingletonPattern::testSingletonSafePtr()
 {
-    return SingletonSafe::getInstance( "Pierre Beldor");
+    return SingletonSafe::getInstance( "My instance");
 }
 
 std::unique_ptr<SingletonSafe> TestSingletonPattern::testSingletonSafeWithUiquePtr()
