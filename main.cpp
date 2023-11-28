@@ -2,7 +2,7 @@
 
 #include "Singleton.h"
 #include "TestSingletonPattern.h"
-
+#include "TestFactoryPattern.h"
 
 using namespace patterns;
 
@@ -13,5 +13,9 @@ auto main(int argc, char* argv[]) ->int
 	auto val = TestSingletonPattern::testEagerInitializedSingleton();
 	auto val2 = TestSingletonPattern::testSingleton2();
 	std::cout << "The singleton value is: " << val2->getValue() << "\n";
+
+	std::cout <<"======================  Factory Patterns Tests  ==========================\n";
+	TestFactoryPattern::TestComputerFactory();
+	
 	return 0;
 }
