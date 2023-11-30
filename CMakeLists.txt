@@ -24,18 +24,23 @@ FetchContent_Declare(
  FetchContent_MakeAvailable(googletest)
  add_subdirectory(SingletonPattern)
  add_subdirectory(FactoryPattern)
+ add_subdirectory(AbstractFactory)
  
 add_executable(${PROJECT_NAME} main.cpp)
 
 target_link_libraries(${PROJECT_NAME}
     PUBLIC singletonPattern
     PUBLIC factoryPattern
+    PUBLIC abstractFactoryPattern
     PUBLIC gtest)
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC ${PROJECT_BINARY_DIR}
+    PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/SingletonPattern/include
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/FactoryPattern/include
+    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/AbstractFactory/include
     )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
