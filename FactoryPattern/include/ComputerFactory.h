@@ -1,9 +1,9 @@
-/*
+/*****************************************************************************
  * ComputerFactory.h
  *
  *  Created on: Nov 8, 2023
- *  Author: pierrebeldor
- */
+ *  Author: Peter Nichols
+ *****************************************************************************/
 
 #ifndef DESIGNPATTERNS_FACTORYPATTERN_COMPUTERFACTORY_H_
 #define DESIGNPATTERNS_FACTORYPATTERN_COMPUTERFACTORY_H_
