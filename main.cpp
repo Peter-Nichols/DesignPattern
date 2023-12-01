@@ -3,6 +3,7 @@
 #include "Singleton.h"
 #include "TestSingletonPattern.h"
 #include "TestFactoryPattern.h"
+#include "TestAdapterPattern.h"
 
 using namespace patterns;
 
@@ -16,6 +17,10 @@ auto main(int argc, char* argv[]) ->int
 
 	std::cout <<"======================  Factory Patterns Tests  ==========================\n";
 	TestFactoryPattern::TestComputerFactory();
+
+	std::cout << "\n========================= Adapter pattern tests ==========================\n\n";
+     TestAdapterPattern::testClassAdapter();
+     TestAdapterPattern::testObjectAdapter();
 	
 	return 0;
 }
