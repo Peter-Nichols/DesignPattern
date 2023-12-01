@@ -1,9 +1,9 @@
-/*
+/***********************************************************************
  * ServerComputer.cpp
  *
- *  Created on: Nov 8, 2023
- *      Author: pierrebeldor
- */
+ * Created on: Nov 8, 2023
+ * Author: Peter Nichols
+ ***********************************************************************/
 
 #include "ServerComputer.h"
 
@@ -11,7 +11,8 @@
 
 namespace patterns {
 
-ServerComputer::ServerComputer() {
+ServerComputer::ServerComputer()
+{
 	// TODO Auto-generated constructor stub
 
 }
@@ -23,7 +24,8 @@ ServerComputer::ServerComputer(std::string& ram, std::string& hdd, std::string& 
 	CPU = cpu;
 }
 
-ServerComputer::~ServerComputer() {
+ServerComputer::~ServerComputer()
+{
 	// TODO Auto-generated destructor stub
 }
 
@@ -49,6 +51,39 @@ ServerComputer& ServerComputer::operator=(ServerComputer &&other)
 
 	return *this;
 }
+
+
+std::string& ServerComputer::getRAM()
+{
+	return this->RAM;
+}
+
+void ServerComputer::setRAM(const std::string& ram)
+{
+	RAM = ram;
+}
+
+std::string& ServerComputer::getHDD()
+{
+	return this->HDD;
+}
+
+void ServerComputer::setHDD(const std::string& hdd)
+{
+	this->HDD = hdd;
+}
+
+std::string& ServerComputer::getCPU()
+{
+	return this->CPU;
+}
+
+
+void ServerComputer::setCPU(const std::string& cpu)
+{
+	this->CPU  = cpu;
+}
+
 
 void ServerComputer::print() const
 {

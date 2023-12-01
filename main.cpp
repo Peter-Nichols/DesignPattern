@@ -3,6 +3,7 @@
 #include "Singleton.h"
 #include "TestSingletonPattern.h"
 #include "TestFactoryPattern.h"
+#include "TestAbstractFactoryPattern.h"
 
 using namespace patterns;
 
@@ -16,6 +17,9 @@ auto main(int argc, char* argv[]) ->int
 
 	std::cout <<"======================  Factory Patterns Tests  ==========================\n";
 	TestFactoryPattern::TestComputerFactory();
+
+	std::cout <<"\n==================  Abtract Factory Patterns Tests  =====================\n";
+	TestAbstractFactoryPattern::CreateAndPrintComputer();
 	
 	return 0;
 }
