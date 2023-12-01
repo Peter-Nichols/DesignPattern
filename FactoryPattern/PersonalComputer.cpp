@@ -49,6 +49,38 @@ PersonalComputer& PersonalComputer::operator=(PersonalComputer &&other)
 	return *this;
 }
 
+std::string& PersonalComputer::getRAM()
+{
+	return this->RAM;
+}
+
+void PersonalComputer::setRAM(const std::string& ram)
+{
+	RAM = ram;
+}
+
+std::string& PersonalComputer::getHDD()
+{
+	return this->HDD;
+}
+
+void PersonalComputer::setHDD(const std::string& hdd)
+{
+	this->HDD = hdd;
+}
+
+std::string& PersonalComputer::getCPU()
+{
+	return this->CPU;
+}
+
+
+void PersonalComputer::setCPU(const std::string& cpu)
+{
+	this->CPU  = cpu;
+}
+
+
 void PersonalComputer::print() const
 {
 	std::cout << "Personal computer class\n\t Ram: " << RAM << "  HDD: " << HDD << "  CPU: "  << CPU << "\n";

@@ -1,9 +1,9 @@
-/*
+/*********************************************************************************
  * ServerComputer.h
  *
- *  Created on: Nov 8, 2023
- *      Author: pierrebeldor
- */
+ * Created on: Nov 8, 2023
+ * Author: Peter Nichols
+ *********************************************************************************/
 
 #ifndef DESIGNPATTERNS_FACTORYPATTERN_SERVERCOMPUTER_H_
 #define DESIGNPATTERNS_FACTORYPATTERN_SERVERCOMPUTER_H_
@@ -25,38 +25,15 @@ public:
 	ServerComputer& operator=(const ServerComputer &other);
 	ServerComputer& operator=(ServerComputer &&other);
 
+
+	std::string& getRAM() override;
+	void setRAM(const std::string& ram) override;
+	std::string& getHDD() override;
+	void setHDD(const std::string& hdd) override;
+	std::string& getCPU() override;
+	void setCPU(const std::string& cpu) override;
+
 	void print() const override;
-
-	std::string& getRAM() override
-	{
-		return this->RAM;
-	}
-
-	void setRAM(const std::string& ram) override
-	{
-		RAM = ram;
-	}
-
-	std::string& getHDD() override
-	{
-		return this->HDD;
-	}
-
-	void setHDD(const std::string& hdd) override
-	{
-		this->HDD = hdd;
-	}
-
-	std::string& getCPU() override
-	{
-		return this->CPU;
-	}
-
-
-	void setCPU(const std::string& cpu) override
-	{
-		this->CPU  = cpu;
-	}
 
 private:
 	std::string RAM;

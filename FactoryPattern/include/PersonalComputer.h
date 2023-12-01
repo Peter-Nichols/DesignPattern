@@ -26,36 +26,12 @@ public:
 	PersonalComputer& operator=(PersonalComputer &&other);
 	void print() const override;
 
-	std::string& getRAM() override
-	{
-		return this->RAM;
-	}
-
-	void setRAM(const std::string& ram) override
-	{
-		RAM = ram;
-	}
-
-	std::string& getHDD() override
-	{
-		return this->HDD;
-	}
-
-	void setHDD(const std::string& hdd) override
-	{
-		this->HDD = hdd;
-	}
-
-	std::string& getCPU() override
-	{
-		return this->CPU;
-	}
-
-
-	void setCPU(const std::string& cpu) override
-	{
-		this->CPU  = cpu;
-	}
+	std::string& getRAM() override;
+	void setRAM(const std::string& ram) override;
+	std::string& getHDD() override;
+	void setHDD(const std::string& hdd) override;
+	std::string& getCPU() override;
+	void setCPU(const std::string& cpu) override;
 
 private:
 	std::string RAM;
