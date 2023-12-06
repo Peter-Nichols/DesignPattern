@@ -3,6 +3,11 @@
 #Author: Peter Nichols
 
 
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
+add_library(factoryPattern STATIC)
+target_sources(factoryPattern PRIVATE ComputerFactory.cpp)
+target_sources(factoryPattern PRIVATE ServerComputer.cpp)
+target_sources(factoryPattern PRIVATE PersonalComputer.cpp)
+target_sources(factoryPattern PRIVATE TestFactoryPattern.cpp)
+target_include_directories(factoryPattern PUBLIC "include")
 
-add_library(factoryPattern STATIC ComputerFactory.cpp ServerComputer.cpp PersonalComputer.cpp TestFactoryPattern.cpp)
+#add_subdirectory(test)

@@ -2,6 +2,10 @@
 # Created on: Nov 7, 2023
 # Author: Peter Nichols
 
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
+add_library(singletonPattern STATIC)
+target_sources(singletonPattern PRIVATE Singleton.cpp)
+target_sources(singletonPattern PRIVATE TestSingletonPattern.cpp)
 
-add_library(singletonPattern STATIC Singleton.cpp TestSingletonPattern.cpp)
+target_include_directories(singletonPattern PUBLIC "include")
+
+#add_subdirectory(test)

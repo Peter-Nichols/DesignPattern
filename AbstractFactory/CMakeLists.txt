@@ -1,15 +1,14 @@
 
 
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../FactoryPattern/include")
 
-add_library(abstractFactoryPattern STATIC
-    ComputerAbstractFactory.cpp
-    PersonalComputerFactory.cpp
-    ServerFactory.cpp
-    ComputerFactory.cpp
-    TestAbstractFactoryPattern.cpp)
+add_library(abstractFactoryPattern STATIC)
+target_sources(abstractFactoryPattern PRIVATE ComputerAbstractFactory.cpp)
+target_sources(abstractFactoryPattern PRIVATE ComputerFactory.cpp)
+target_sources(abstractFactoryPattern PRIVATE PersonalComputerFactory.cpp)
+target_sources(abstractFactoryPattern PRIVATE ServerFactory.cpp)
+target_sources(abstractFactoryPattern PRIVATE TestAbstractFactoryPattern.cpp)
+target_include_directories(abstractFactoryPattern PUBLIC "include")
 
-target_link_libraries(abstractFactoryPattern factoryPattern)
+target_link_libraries(abstractFactoryPattern PUBLIC factoryPattern)
 
-#target_include_directories(abstractFactory INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/include")
+#add_subdirectory(test)

@@ -5,25 +5,51 @@
 #include "TestFactoryPattern.h"
 #include "TestAdapterPattern.h"
 #include "TestAbstractFactoryPattern.h"
+#include "TestBuilderPattern.h"
 
 using namespace patterns;
 
+template <typename... T>
+auto average(T... t)
+{
+	return (t * ...) / sizeof...(t);
+}
+
+template <typename... T>
+auto something(T... t)
+{
+	const int n = 5;
+	return (t * ... * 5);
+}
+
+template <typename... Funcs>
+auto sumFuncs(Funcs... f)
+{
+	return (f() + ...);
+}
+
+
+
+
 auto main(int argc, char* argv[]) ->int
 {
-	  TestSingletonPattern::testSingletonSafe();
+    TestSingletonPattern::testSingletonSafe();
 
-	  auto val = TestSingletonPattern::testEagerInitializedSingleton();
-	  auto val2 = TestSingletonPattern::testSingleton2();
-	  std::cout << "The singleton value is: " << val2->getValue() << "\n";
+    [[maybe_unused]] auto val = TestSingletonPattern::testEagerInitializedSingleton();
+    [[maybe_unused]]  auto val2 = TestSingletonPattern::testSingleton2();
+    std::cout << "The singleton value is: " << val2->getValue() << "\n";
 
-	  std::cout <<"======================  Factory Patterns Tests  ==========================\n";
-	  TestFactoryPattern::TestComputerFactory();
-  
-	  std::cout << "\n========================= Adapter pattern tests ==========================\n\n";
+    std::cout <<"=========================  Factory Patterns Tests  ==========================\n";
+    TestFactoryPattern::TestComputerFactory();
+
+    std::cout << "\n======================== Adapter pattern tests ==========================\n\n";
     TestAdapterPattern::testClassAdapter();
     TestAdapterPattern::testObjectAdapter();
-	  std::cout <<"\n==================  Abtract Factory Patterns Tests  =====================\n";
-	  TestAbstractFactoryPattern::CreateAndPrintComputer();
-	
-	  return 0;
+    std::cout <<"\n====================  Abstract Factory Patterns Tests  =====================\n";
+    TestAbstractFactoryPattern::CreateAndPrintComputer();
+
+	std::cout <<"\n========================  Builder Patterns Tests  =========================\n";
+	TestBuilderPattern::BuildAndPrintComputer();
+
+    return 0;
 }
