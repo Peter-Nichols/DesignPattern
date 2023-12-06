@@ -45,7 +45,7 @@ auto main(int argc, char* argv[]) ->int
     std::cout << "\n======================== Adapter pattern tests ==========================\n\n";
     TestAdapterPattern::testClassAdapter();
     TestAdapterPattern::testObjectAdapter();
-    std::cout <<"\n====================  Abtract Factory Patterns Tests  =====================\n";
+    std::cout <<"\n====================  Abstract Factory Patterns Tests  =====================\n";
     TestAbstractFactoryPattern::CreateAndPrintComputer();
 
 	std::cout <<"\n========================  Builder Patterns Tests  =========================\n";

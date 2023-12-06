@@ -26,7 +26,7 @@ public:
 
 	explicit Computer(ComputerBuilder builder);
 	Computer();
-	virtual ~Computer();
+	virtual ~Computer() = default;
 	Computer(const Computer &other);
 	Computer(Computer &&other);
 	Computer& operator=(const Computer &other);

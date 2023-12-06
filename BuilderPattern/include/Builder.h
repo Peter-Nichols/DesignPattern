@@ -18,7 +18,6 @@ public:
 	virtual void addLastName(std::string lname) = 0;
 	virtual void addDOB(std::string DOB) = 0;
 	virtual void addAddress(std::string address) = 0;
-
 };
 
 } /* namespace patterns */

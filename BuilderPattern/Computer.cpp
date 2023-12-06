@@ -2,7 +2,7 @@
  * Computer.cpp
  *
  *  Created on: Nov 8, 2023
- *  Author: pierrebeldor
+ *  Author: Peter Nichols
  */
 
 #include "Computer.h"
@@ -14,13 +14,7 @@ namespace patterns {
 
 Computer::Computer()
 {
-	// TODO Auto-generated constructor stub
 
-}
-
-Computer::~Computer()
-{
-	// TODO Auto-generated destructor stub
 }
 
 Computer::Computer(ComputerBuilder builder)
