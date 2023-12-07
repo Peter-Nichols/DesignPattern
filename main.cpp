@@ -6,6 +6,7 @@
 #include "TestAdapterPattern.h"
 #include "TestAbstractFactoryPattern.h"
 #include "TestBuilderPattern.h"
+#include "TestCompositePattern.h"
 
 using namespace patterns;
 
@@ -50,6 +51,9 @@ auto main(int argc, char* argv[]) ->int
 
 	std::cout <<"\n========================  Builder Patterns Tests  =========================\n";
 	TestBuilderPattern::BuildAndPrintComputer();
+
+    std::cout <<"\n=======================  Composite Patterns Tests  ========================\n";
+    TestCompositePattern::testShapeDrawing();
 
     return 0;
 }

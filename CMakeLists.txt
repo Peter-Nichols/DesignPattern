@@ -22,32 +22,23 @@ FetchContent_Declare(
 
 
  FetchContent_MakeAvailable(googletest)
- add_subdirectory(SingletonPattern)
- add_subdirectory(FactoryPattern)
- add_subdirectory(AdapterPattern)
- add_subdirectory(AbstractFactory)
- add_subdirectory(BuilderPattern)
- 
-add_executable(${PROJECT_NAME} main.cpp)
 
-target_link_libraries(${PROJECT_NAME}
-    PUBLIC singletonPattern
-    PUBLIC factoryPattern
-    PUBLIC adapterPattern
-    PUBLIC abstractFactoryPattern
-    PUBLIC builderPattern
-    PUBLIC gtest)
+ add_executable(${PROJECT_NAME} main.cpp)
 
-target_include_directories(${PROJECT_NAME}
-    PUBLIC ${PROJECT_BINARY_DIR}
-    PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/SingletonPattern/include
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/FactoryPattern/include
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/AdapterPattern/include
-    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/AbstractFactory/include
-    public ${CMAKE_CURRENT_SOURCE_DIR}/BuilderPattern/include
-    )
+add_subdirectory(SingletonPattern)
+target_link_libraries(DesignPattern PUBLIC singletonPattern)
+add_subdirectory(FactoryPattern)
+target_link_libraries(DesignPattern PUBLIC factoryPattern)
+add_subdirectory(AdapterPattern)
+target_link_libraries(DesignPattern PUBLIC adapterPattern)
+add_subdirectory(AbstractFactory)
+target_link_libraries(DesignPattern PUBLIC abstractFactoryPattern)
+add_subdirectory(BuilderPattern)
+target_link_libraries(DesignPattern PUBLIC builderPattern)
+add_subdirectory(CompositePattern)
+target_link_libraries(DesignPattern PUBLIC compositePattern)
+
+target_link_libraries(DesignPattern PUBLIC gtest)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
