@@ -1,20 +1,20 @@
-/*
+/*****************************************************************
  * Employees.cpp
  *
- *  Created on: Nov 7, 2023
- *      Author: pierrebeldor
- */
+ * Created on: Nov 7, 2023
+ * Author: Peter Nichols
+ *****************************************************************/
 
 #include "Employees.h"
+
+
 #include <iostream>
 
 namespace patterns {
 
-Employees::Employees() {
-	// TODO Auto-generated constructor stub
-
+Employees::Employees()
+{
 }
-
 
 Employees::Employees(std::list<std::string> empList, std::vector<std::string> empVector)
 {
@@ -22,36 +22,58 @@ Employees::Employees(std::list<std::string> empList, std::vector<std::string> em
 	this->empVector = empVector;
 }
 
-Employees::~Employees() {
-	// TODO Auto-generated destructor stub
+Employees::~Employees()
+{
 }
 
 //Move assignment
-Employees& Employees::operator=(Employees &&other) {
-	// TODO Auto-generated method stub
-	//&empList = other.empList;
-	//&empVector = other.empVector;
+Employees& Employees::operator=(Employees &&other)
+{
+	if (this != &other)
+	{
+		empList.clear();
+		empVector.clear();
+
+		empList = other.empList;
+		empVector = other.empVector;
+
+		other.empList.clear();
+		other.empVector.clear();
+	}
 
 	return *this;
 }
 
-//Copy constructor
+//Copy assignment
 Employees& Employees::operator=(const Employees &other)
 {
-	empList = other.empList;
-	empVector = other.empVector;
+	if (this != &other)
+	{
+	    empList = other.empList;
+        empVector = other.empVector;
+	}
 
 	return *this;
 }
 
 //Move constructor
-Employees::Employees(Employees &&other)
+Employees::Employees(Employees &&other) noexcept :
+empList(),
+empVector()
 {
+	// empList = other.empList;
+	// empVector = other.empVector;
+
+	// other.empList.clear();
+	// other.empVector.clear();
+
+	*this = std::move(other);
 }
 
+//Copy constructor
 Employees::Employees(const Employees &other) :
-		empList(other.empList),
-		empVector(other.empVector)
+        empList(other.empList),
+        empVector(other.empVector)
 {
 }
 
@@ -74,7 +96,6 @@ std::vector<std::string> Employees::getEmpVector() const
 	return empVector;
 }
 
-
 void Employees::addNew(const std::string& newEmp)
 {
 	empList.push_back(newEmp);
@@ -89,4 +110,4 @@ void Employees::printEmployees()
 		std::cout << val << "\n";
 	}
 }
-} /* namespace employees */
+} /* namespace patterns */

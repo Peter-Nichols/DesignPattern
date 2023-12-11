@@ -26,7 +26,7 @@ public:
 	virtual ~Employees();
 	Employees& operator=(Employees &&other);
 	Employees& operator=(const Employees &other);
-	Employees(Employees &&other);
+	Employees(Employees &&other) noexcept;
 	Employees(const Employees &other);
 
 	void addNew(const std::string& newEmp);
