@@ -6,6 +6,7 @@
 #include "TestAdapterPattern.h"
 #include "TestAbstractFactoryPattern.h"
 #include "TestBuilderPattern.h"
+#include "TestPrototypePattern.h"
 #include "TestCompositePattern.h"
 
 using namespace patterns;
@@ -49,9 +50,12 @@ auto main(int argc, char* argv[]) ->int
     std::cout <<"\n====================  Abstract Factory Patterns Tests  =====================\n";
     TestAbstractFactoryPattern::CreateAndPrintComputer();
 
-	std::cout <<"\n========================  Builder Patterns Tests  =========================\n";
-	TestBuilderPattern::BuildAndPrintComputer();
+    std::cout <<"\n========================  Builder Patterns Tests  =========================\n";
+    TestBuilderPattern::BuildAndPrintComputer();
 
+    std::cout <<"\n========================  Prototype Patterns Tests  =========================\n";
+    TestPrototypePattern::CreateAndPrintEmployeesList();
+  
     std::cout <<"\n=======================  Composite Patterns Tests  ========================\n";
     TestCompositePattern::testShapeDrawing();
 
