@@ -9,6 +9,8 @@
 #include "TestPrototypePattern.h"
 #include "TestCompositePattern.h"
 
+#include "TestTemplatePattern.h"
+
 using namespace patterns;
 
 template <typename... T>
@@ -58,6 +60,9 @@ auto main(int argc, char* argv[]) ->int
   
     std::cout <<"\n=======================  Composite Patterns Tests  ========================\n";
     TestCompositePattern::testShapeDrawing();
+
+    std::cout <<"\n=======================  Template Patterns Tests  ========================\n";
+    TestTemplatePattern::BuildAndPrintTemplatePattern();
 
     return 0;
 }
