@@ -63,6 +63,7 @@ auto main(int argc, char* argv[]) ->int
     std::cout <<"\n============  ChainOfResponsipility Patterns Patterns Tests  ================\n";
     TestChainOfResponsibilityPattern::dispenseMoneyFromATM(530);
     TestChainOfResponsibilityPattern::dispenseMoneyFromATM(120);
+    TestChainOfResponsibilityPattern::dispenseMoneyFromATM(55);
 
     return 0;
 }

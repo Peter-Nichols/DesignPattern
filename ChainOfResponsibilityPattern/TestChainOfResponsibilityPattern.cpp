@@ -18,11 +18,9 @@ void TestChainOfResponsibilityPattern::dispenseMoneyFromATM(int value)
     }
     else
     {
-        std::cout << "Dispensing money for " << value << "$.\n";
+        std::cout << "\n------------  Dispensing money for " << value << "$. ---------------------\n";
         // Process the request
         atmDispenser->getChainOfResponsibility()->dispense(new Currency(value));
     }
-    
-    
 }
 } // namespace patterns
