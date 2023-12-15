@@ -8,6 +8,7 @@
 #include "TestBuilderPattern.h"
 #include "TestPrototypePattern.h"
 #include "TestCompositePattern.h"
+#include "TestStrategyPattern.h"
 
 using namespace patterns;
 
@@ -58,6 +59,10 @@ auto main(int argc, char* argv[]) ->int
   
     std::cout <<"\n=======================  Composite Patterns Tests  ========================\n";
     TestCompositePattern::testShapeDrawing();
+
+    std::cout <<"\n=======================  Strategy Patterns Tests  ========================\n";
+
+    TestStrategyPattern::AddItemAndPay();
 
     return 0;
 }
