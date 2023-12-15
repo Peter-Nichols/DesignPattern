@@ -8,6 +8,7 @@
 #include "TestBuilderPattern.h"
 #include "TestPrototypePattern.h"
 #include "TestCompositePattern.h"
+#include "TestBridgePattern.h"
 
 using namespace patterns;
 
@@ -58,6 +59,9 @@ auto main(int argc, char* argv[]) ->int
   
     std::cout <<"\n=======================  Composite Patterns Tests  ========================\n";
     TestCompositePattern::testShapeDrawing();
+
+    std::cout <<"\n=======================  Bridge Patterns Tests  ========================\n";
+    TestBridgePattern::CreateAndPrintBridgePattern();
 
     return 0;
 }

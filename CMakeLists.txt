@@ -39,6 +39,8 @@ add_subdirectory(PrototypePattern)
 target_link_libraries(DesignPattern PUBLIC prototypePattern)
 add_subdirectory(CompositePattern)
 target_link_libraries(DesignPattern PUBLIC compositePattern)
+add_subdirectory(BridgePattern)
+target_link_libraries(DesignPattern PUBLIC bridgePattern)
 
 target_link_libraries(DesignPattern PUBLIC gtest)
 
