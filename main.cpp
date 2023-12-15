@@ -9,8 +9,8 @@
 #include "TestPrototypePattern.h"
 #include "TestCompositePattern.h"
 #include "TestBridgePattern.h"
-
 #include "TestTemplatePattern.h"
+#include "TestChainOfResponsibilityPattern.h"
 
 using namespace patterns;
 
@@ -50,16 +50,16 @@ auto main(int argc, char* argv[]) ->int
     std::cout << "\n======================== Adapter pattern tests ==========================\n\n";
     TestAdapterPattern::testClassAdapter();
     TestAdapterPattern::testObjectAdapter();
-    std::cout <<"\n====================  Abstract Factory Patterns Tests  =====================\n";
+    std::cout <<"\n====================  Abstract Factory Patterns Tests  ======================\n";
     TestAbstractFactoryPattern::CreateAndPrintComputer();
 
-    std::cout <<"\n========================  Builder Patterns Tests  =========================\n";
+    std::cout <<"\n========================  Builder Patterns Tests  ===========================\n";
     TestBuilderPattern::BuildAndPrintComputer();
 
     std::cout <<"\n========================  Prototype Patterns Tests  =========================\n";
     TestPrototypePattern::CreateAndPrintEmployeesList();
   
-    std::cout <<"\n=======================  Composite Patterns Tests  ========================\n";
+    std::cout <<"\n=======================  Composite Patterns Tests  ==========================\n";
     TestCompositePattern::testShapeDrawing();
 
     std::cout <<"\n=======================  Template Patterns Tests  ========================\n";
@@ -67,6 +67,11 @@ auto main(int argc, char* argv[]) ->int
 
     std::cout <<"\n=======================  Bridge Patterns Tests  ========================\n";
     TestBridgePattern::CreateAndPrintBridgePattern();
+
+    std::cout <<"\n============  ChainOfResponsipility Patterns Patterns Tests  ================\n";
+    TestChainOfResponsibilityPattern::dispenseMoneyFromATM(530);
+    TestChainOfResponsibilityPattern::dispenseMoneyFromATM(120);
+    TestChainOfResponsibilityPattern::dispenseMoneyFromATM(55);
 
     return 0;
 }

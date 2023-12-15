@@ -43,6 +43,8 @@ add_subdirectory(TemplatePattern)
 target_link_libraries(DesignPattern PUBLIC templatePattern)
 add_subdirectory(BridgePattern)
 target_link_libraries(DesignPattern PUBLIC bridgePattern)
+add_subdirectory(ChainOfResponsibilityPattern)
+target_link_libraries(DesignPattern PUBLIC chainOfResponsibilityPattern)
 
 target_link_libraries(DesignPattern PUBLIC gtest)
 
