@@ -45,6 +45,8 @@ add_subdirectory(BridgePattern)
 target_link_libraries(DesignPattern PUBLIC bridgePattern)
 add_subdirectory(ChainOfResponsibilityPattern)
 target_link_libraries(DesignPattern PUBLIC chainOfResponsibilityPattern)
+add_subdirectory(StrategyPattern)
+target_link_libraries(DesignPattern PUBLIC strategyPattern)
 
 target_link_libraries(DesignPattern PUBLIC gtest)
 
