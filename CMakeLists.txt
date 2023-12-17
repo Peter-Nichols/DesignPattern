@@ -47,6 +47,8 @@ add_subdirectory(ChainOfResponsibilityPattern)
 target_link_libraries(DesignPattern PUBLIC chainOfResponsibilityPattern)
 add_subdirectory(StrategyPattern)
 target_link_libraries(DesignPattern PUBLIC strategyPattern)
+add_subdirectory(VisitorPattern)
+target_link_libraries(DesignPattern PUBLIC visitorPattern)
 
 target_link_libraries(DesignPattern PUBLIC gtest)
 

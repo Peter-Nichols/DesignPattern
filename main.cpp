@@ -12,6 +12,7 @@
 #include "TestTemplatePattern.h"
 #include "TestChainOfResponsibilityPattern.h"
 #include "TestStrategyPattern.h"
+#include "TestVisitorPattern.h"
 
 using namespace patterns;
 
@@ -75,8 +76,10 @@ auto main(int argc, char* argv[]) ->int
     TestChainOfResponsibilityPattern::dispenseMoneyFromATM(55);
 
     std::cout <<"\n=======================  Strategy Patterns Tests  ========================\n";
-
     TestStrategyPattern::AddItemAndPay();
+
+    std::cout <<"\n=======================  Visitor Patterns Tests  ========================\n";
+    TestVisitorPattern::BuildAndPrintVisitorPattern();
     
     return 0;
 }
