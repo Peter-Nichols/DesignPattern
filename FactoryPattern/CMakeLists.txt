@@ -10,4 +10,4 @@ target_sources(factoryPattern PRIVATE PersonalComputer.cpp)
 target_sources(factoryPattern PRIVATE TestFactoryPattern.cpp)
 target_include_directories(factoryPattern PUBLIC "include")
 
-#add_subdirectory(test)
+add_subdirectory(test)
