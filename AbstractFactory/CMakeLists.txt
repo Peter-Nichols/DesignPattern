@@ -11,4 +11,4 @@ target_include_directories(abstractFactoryPattern PUBLIC "include")
 
 target_link_libraries(abstractFactoryPattern PUBLIC factoryPattern)
 
-#add_subdirectory(test)
+add_subdirectory(test)

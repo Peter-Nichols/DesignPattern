@@ -74,6 +74,7 @@ protected:
 
 public:
 	static Singleton2* getInstance(const std::string value);
+	
 	std::string getValue() const
 	{
 		return valueid;

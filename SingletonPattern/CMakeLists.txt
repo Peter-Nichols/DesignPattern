@@ -8,4 +8,4 @@ target_sources(singletonPattern PRIVATE TestSingletonPattern.cpp)
 
 target_include_directories(singletonPattern PUBLIC "include")
 
-#add_subdirectory(test)
+add_subdirectory(test)
