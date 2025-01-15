@@ -62,9 +62,13 @@ target_link_libraries(DesignPattern PUBLIC visitorPattern)
 
 target_link_libraries(DesignPattern PUBLIC gtest)
 
+set(CMAKE_BUILD_TYPE "Debug")
+
+target_compile_options(DesignPattern PRIVATE -coverage)
+target_link_options(DesignPattern PRIVATE -coverage)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
-include(CTest)
 include(Catch)
 #catch_discover_tests(tests)

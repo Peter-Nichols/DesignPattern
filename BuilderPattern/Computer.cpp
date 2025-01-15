@@ -21,6 +21,7 @@ Computer::Computer(ComputerBuilder builder)
 {
 	this->HDD = builder.getHDD();
 	this->RAM = builder.getRAM();
+	this->CPU = builder.getCPU();
 	this->isBluetoothEnabled = builder.isIsBluetoothEnabled();
 	this->isGraphicCardEnabled = builder.isIsGraphicCardEnabled();
 }
