@@ -132,6 +132,11 @@ public:
 		return RAM;
 	}
 
+	const std::string& getCPU() const
+	{
+		return CPU;
+	}
+
 protected:
 	Computer computer;
 

@@ -11,4 +11,4 @@ target_sources(adapterPattern PRIVATE TestAdapterPattern.cpp)
 
 target_include_directories(adapterPattern PUBLIC "include")
 
-#add_subdirectory(test)
+add_subdirectory(test)

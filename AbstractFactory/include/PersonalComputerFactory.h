@@ -17,7 +17,7 @@ public:
 
     virtual ~PersonalComputerFactory(){}
 
-    ComputerInterface* createComputer();
+    ComputerInterface* createComputer() override;
 
 
 private:
