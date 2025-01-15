@@ -8,10 +8,10 @@ if(BUILD_TESTING)
     target_include_directories(builderPatternTest
                            PUBLIC "${PROJECT_BINARY_DIR}"
                            PUBLIC "${PROJECT_SOURCE_DIR}/BuilderPattern/include"
-                           PUBLIC "${PROJECT_SOURCE_DIR}/FactoryPattern/include"
+                           #PUBLIC "${PROJECT_SOURCE_DIR}/FactoryPattern/include"
                            )
 
-    #add_test()
+    add_test(NAME builderTests COMMAND builderPatternTest)
     include(GoogleTest)
 
     gtest_discover_tests(builderPatternTest)

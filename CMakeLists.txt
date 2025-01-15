@@ -2,8 +2,11 @@
 
 ]]#
 
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.31.3)
 
+#find_package(Catch2 REQUIRED)
+#add_executable(tests test.cpp)
+#target_link_libraries(tests PRIVATE Catch2::Catch2)
 
 project(DesignPattern
     VERSION 1.0.0
@@ -17,11 +20,18 @@ include(FetchContent)
 FetchContent_Declare(
    googletest
    GIT_REPOSITORY https://github.com/google/googletest.git
-   GIT_TAG        release-1.11.0
+   GIT_TAG        v1.15.2
 )
 
-
  FetchContent_MakeAvailable(googletest)
+
+ FetchContent_Declare(
+  Catch2
+  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+  GIT_TAG        v3.4.0 # or a later release
+)
+
+FetchContent_MakeAvailable(Catch2)
 
  add_executable(${PROJECT_NAME} main.cpp)
 
@@ -55,3 +65,6 @@ target_link_libraries(DesignPattern PUBLIC gtest)
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
+include(CTest)
+include(Catch)
+#catch_discover_tests(tests)
